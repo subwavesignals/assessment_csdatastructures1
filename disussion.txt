@@ -1,0 +1,74 @@
+Runtime:
+
+1. In general, the workload is determined by the function or algorithm we use to
+   search for the elephant. If we can dump out the whole box in one action and
+   immeadiately find or not find the elephant, it's O(1) since the action is 
+   immeadiate. If we have to take each cracker out and compare it to the 
+   picture of an elephant cracker, it's O(n) since we must perform a number of
+   actions equal to the number of crackers in the box.
+
+2.  O(1)
+    O(log n)
+    O(n)
+    O(n log n)
+    O(n^2)
+    O(2^n)
+
+
+Stacks and Queues:
+
+1. 1. A stack because the first boxes go to the back of the truck and cannot be 
+      unloaded until the last boxes have been removed.
+   2. A queue because you want to cap bottles in the order they arrive so as to 
+      not miss any as the line goes by.
+   3. A stack because we want to keep track of the parens and execute those 
+      expressions before the others.
+
+2. Examples of queues are check out lines and anything that advertises itself as
+   "First come, First serve."
+
+3. Examples of stacks are Pringles in their can (the first chip you get was the 
+   last into the can) and building and dismantling something made of blocks or
+   Legos (so long as you're not one of those people who just smahses it when
+   they're done).
+
+
+Linked Lists:
+
+1. The nodes are the three boxes on the second row of the diagram. The first node
+   has data "Apple", the second "Berry", and the third "Cherry". Each node also
+   has a .next refernce which is the arrow linking one node to the next.
+   "Apple".next is "Berry", "Berry".next is "Cherry", and "Cherry".next is None,
+   indicating that it is the end or tail of the list. Since the linked list 
+   object has a head value that points to "Apple" it is therefore the head of the
+   linked list.
+
+2. Doubly-linked lists not only have references to the node that comes after them
+   (.next), but also a reference to the node before them (.prev). This helps to
+   improve the runtime of removing items from the middle or end of the list. 
+
+3. If we track the tail of the list, then when we append we have a reference to
+   what used to be the last node. This allows us to change the (now) second to
+   last node's .next value to be the new last node. If we don't track the tail,
+   we would need to iterate over the LL until we find the node with .next = None.
+
+
+Trees:
+
+1. Assuming the nodes are appended to the queue in left-to-right order:
+   food -> Italian -> Indian -> Mexican -> lasagna -> pizza -> tikka masala ->
+   saag -> burritos #YAY!
+
+2. Again, assuming the nodes are added to the stack in l-t-r order:
+   food -> Mexican -> enchiladas -> tacos -> burritos -> Indian -> saag ->
+   tikka masala -> Italian -> pizza -> Sicilian -> New-York style -> Chicago-style
+
+3. In a binary search tree, each node has exactly two children. Any children or 
+   descendants to the left of a node have a value less than the current node. 
+   Any children or descendants to the right have a value greater than the current
+   node. This improves searching runtime to O(log n) because we can cut the 
+   number of possibilities in half with each step.
+
+
+
+
